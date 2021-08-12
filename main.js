@@ -2,10 +2,6 @@ img="";
 status="";
 objects=[];
 
-function preload(){
-    img=loadImage('dog_cat.jpg');
-}
-
 function setup(){
     canvas=createCanvas(380,380);
     canvas.center();
@@ -41,7 +37,6 @@ function draw(){
 function modelLoaded(){
     console.log("Model Loaded");
     status="true";
-    objectDetector.detect(video,gotResult);
 }
 
 function gotResult(error,results){
